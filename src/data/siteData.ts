@@ -363,6 +363,33 @@ export const projectsData: ProjectItem[] = [
       "/images/doha-billboard.png"
     ],
     imagePosition: "object-bottom"
+  },
+  {
+    slug: "jabi-boulevard-office-space",
+    title: "Jabi Boulevard Office Space",
+    location: "Jabi, Abuja",
+    startingPrice: "₦45.0 Million",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+    highlights: [
+      "Prime commercial office corridor",
+      "Main road visibility & access",
+      "Fractional investment options",
+      "Managed executive rentals"
+    ],
+    description: "Jabi Boulevard is a premium, contemporary commercial development situated in the heart of Jabi, Abuja. Designed to meet the standards of executive office space and corporate headquarters, the project offers state-of-the-art facilities, central drainage, ample secure parking, and excellent road network access.",
+    features: [
+      "Multi-level executive office layouts",
+      "Advanced security access & CCTV perimeter",
+      "High-speed fiber connectivity ready",
+      "Dedicated corporate parking spaces",
+      "Central power generator and stable utilities"
+    ],
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.0631627632613!2d7.420803475908298!3d9.067160788339328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e7561f748db87%3A0xc48c0b24032d9cbf!2sEmmanuel%20Adiele%20St%2C%20Jabi%2C%20Abuja!5e0!3m2!1sen!2sng!4v1689033000000!5m2!1sen!2sng",
+    availability: "Available",
+    category: "Commercial",
+    gallery: [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
+    ]
   }
 ];
 

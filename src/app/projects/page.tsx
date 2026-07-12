@@ -66,7 +66,7 @@ export default function ProjectsPage() {
                 className={`relative px-5 xl:px-6 py-2 rounded-full text-2xs font-extrabold uppercase tracking-wider transition-colors duration-350 focus:outline-none ${
                   filter === cat
                     ? "text-white"
-                    : "text-gray-550 hover:text-brand-green"
+                    : "text-gray-500 hover:text-brand-green"
                 }`}
               >
                 {filter === cat && (

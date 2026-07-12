@@ -105,7 +105,7 @@ export default function PropertiesPage() {
                     className={`relative flex-1 text-center py-2.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider transition-colors duration-300 focus:outline-none ${
                       locationFilter === loc
                         ? "text-white"
-                        : "text-gray-550 hover:text-brand-green"
+                        : "text-gray-500 hover:text-brand-green"
                     }`}
                   >
                     {locationFilter === loc && (
