@@ -57,27 +57,29 @@ export default function ProjectsPage() {
         </div>
 
         {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center items-center gap-3">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`relative px-5 py-2.5 rounded-full text-xs font-bold transition-colors duration-300 focus:outline-none ${
-                filter === cat
-                  ? "text-white"
-                  : "bg-brand-gray/60 text-gray-600 border border-brand-gray-dark hover:bg-brand-gray hover:text-brand-green"
-              }`}
-            >
-              {filter === cat && (
-                <motion.span
-                  layoutId="activeProjectCategory"
-                  className="absolute inset-0 bg-brand-green rounded-full z-0"
-                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">{cat}</span>
-            </button>
-          ))}
+        <div className="flex justify-center items-center">
+          <div className="inline-flex flex-wrap items-center gap-1.5 bg-brand-gray/40 border border-brand-gray-dark p-1 rounded-full shadow-2xs">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilter(cat)}
+                className={`relative px-5 xl:px-6 py-2 rounded-full text-2xs font-extrabold uppercase tracking-wider transition-colors duration-350 focus:outline-none ${
+                  filter === cat
+                    ? "text-white"
+                    : "text-gray-550 hover:text-brand-green"
+                }`}
+              >
+                {filter === cat && (
+                  <motion.span
+                    layoutId="activeProjectCategory"
+                    className="absolute inset-0 bg-brand-green rounded-full z-0 shadow-xs"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{cat}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 

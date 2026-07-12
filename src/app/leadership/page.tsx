@@ -244,7 +244,75 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      {/* 3. CEO Site Inspections & Field Gallery */}
+      {/* 3. Brand Ambassador Section */}
+      <section className="py-20 bg-brand-gray/25 border-t border-b border-brand-gray-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Ambassador Image Panel */}
+            <div className="lg:col-span-5 space-y-4">
+              <div className="relative h-[380px] rounded-3xl overflow-hidden shadow-xl border border-brand-gray-dark group bg-white">
+                <SafeImage
+                  src="/images/uncle-pikin.png"
+                  fallbackSrc="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                  alt="Uncle Pikin, Leranjeh Brand Ambassador"
+                  fill
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-103"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal via-transparent to-transparent opacity-85" />
+                <div className="absolute bottom-6 left-6 right-6 text-white text-left">
+                  <span className="bg-brand-gold text-brand-charcoal text-2xs font-extrabold px-3 py-1 rounded uppercase tracking-wider mb-2 inline-block">
+                    Official Ambassador
+                  </span>
+                  <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-white leading-none">
+                    Uncle Pikin
+                  </h3>
+                  <p className="text-brand-gold-light text-xs font-semibold uppercase mt-1 tracking-wider">
+                    Media Influencer & Brand Representative
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Ambassador Profile Text */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="space-y-3">
+                <span className="text-xs uppercase font-extrabold tracking-widest text-brand-gold-dark block">
+                  Advocate for Integrity & Standards
+                </span>
+                <h2 className="text-3xl font-extrabold font-heading text-brand-green">
+                  Media Influence & Public Representation
+                </h2>
+                <h3 className="text-gray-500 font-medium text-sm sm:text-base leading-relaxed">
+                  Bridging premium property development and community advocacy across Nigeria.
+                </h3>
+              </div>
+
+              <div className="text-gray-650 text-sm md:text-base space-y-4 leading-relaxed font-body">
+                <p>
+                  As the official Brand Ambassador for Leranjeh Nigeria Limited, **Uncle Pikin** champions 
+                  the core values of transparency, structural integrity, and customer advocacy. Through 
+                  large-scale public campaigns, educational media content, and community outreach, he helps 
+                  investors navigate the complex real estate market and secure legally verified layouts in 
+                  Abuja and Adamawa State.
+                </p>
+                <p>
+                  His partnership with Leranjeh goes beyond media visibility; it represents a commitment to 
+                  guaranteeing that every everyday citizen and institutional investor secures properties backed 
+                  by certified government records and zero-litigation guarantees.
+                </p>
+              </div>
+
+              <div className="p-5 border-l-4 border-brand-green bg-white rounded-r-xl shadow-xs italic text-gray-700 text-xs sm:text-sm leading-relaxed">
+                &ldquo;Leranjeh is built on absolute transparency and design excellence. I am proud to represent a brand that values building integrity and verified land banking as its highest corporate priorities.&rdquo;
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 4. CEO Site Inspections & Field Gallery */}
       <section className="py-24 bg-brand-gray/30 border-t border-b border-brand-gray-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
@@ -303,6 +371,41 @@ export default function LeadershipPage() {
                 fallbackSrc: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
                 title: "On-Site Design Consultation",
                 desc: "Answering specific spatial layout and biophilic ventilation design queries directly on the development floor."
+              },
+              {
+                id: "visit-7",
+                imgSrc: "/images/leadership-visit-1.jpg",
+                fallbackSrc: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
+                title: "Bungalow Structural Handover",
+                desc: "Verifying exterior structural plastering, lintels, and site layout boundaries prior to final client handover."
+              },
+              {
+                id: "visit-8",
+                imgSrc: "/images/leadership-visit-2.jpg",
+                fallbackSrc: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop",
+                title: "Slab Framework Operations",
+                desc: "Supervising concrete deck reinforcement layouts and blockwork spacing directly with structural site crew."
+              },
+              {
+                id: "visit-9",
+                imgSrc: "/images/leadership-visit-3.jpg",
+                fallbackSrc: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop",
+                title: "Multi-Storey Site Development",
+                desc: "Inspecting high-capacity timber formwork scaffolding and load-bearing columns on active residential build blocks."
+              },
+              {
+                id: "visit-10",
+                imgSrc: "/images/leadership-visit-4.jpg",
+                fallbackSrc: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=800&auto=format&fit=crop",
+                title: "Timber Scaffolding Framing",
+                desc: "Directing structural wood scaffolding setups and concrete casting preparation for upper-level slab decks."
+              },
+              {
+                id: "visit-11",
+                imgSrc: "/images/leadership-visit-5.jpg",
+                fallbackSrc: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop",
+                title: "Bungalow Exterior Audits",
+                desc: "Inspecting drainage line setups, window framing, and external compound parameters of completed layouts."
               }
             ].map((item) => (
               <SiteVisitCard

@@ -97,21 +97,21 @@ export default function PropertiesPage() {
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-brand-gold-dark">
                 Filter by Region:
               </span>
-              <div className="flex items-center gap-1 w-full bg-brand-gray/40 border border-brand-gray-dark p-1 rounded-xl">
+              <div className="flex items-center gap-1 w-full bg-brand-gray/40 border border-brand-gray-dark p-1 rounded-full">
                 {locationsList.map((loc) => (
                   <button
                     key={loc}
                     onClick={() => setLocationFilter(loc)}
-                    className={`relative flex-1 text-center py-2.5 rounded-lg text-[10px] font-extrabold uppercase tracking-wider transition-colors duration-300 focus:outline-none ${
+                    className={`relative flex-1 text-center py-2.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider transition-colors duration-300 focus:outline-none ${
                       locationFilter === loc
                         ? "text-white"
-                        : "text-gray-500 hover:text-brand-green"
+                        : "text-gray-550 hover:text-brand-green"
                     }`}
                   >
                     {locationFilter === loc && (
                       <motion.span
                         layoutId="activePropertyLocation"
-                        className="absolute inset-0 bg-brand-green rounded-lg z-0"
+                        className="absolute inset-0 bg-brand-green rounded-full z-0"
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}

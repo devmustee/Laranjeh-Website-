@@ -92,28 +92,17 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={`tel:${siteConfig.phones.support}`}
-              className={`flex items-center gap-1 text-[0.85rem] font-semibold transition-colors ${
-                isHome && !scrolled
-                  ? "text-white/90 hover:text-brand-gold-light"
-                  : "text-gray-700 hover:text-brand-green"
-              }`}
-            >
-              <Phone size={14} className="text-brand-gold" />
-              <span>{siteConfig.phones.supportFormatted}</span>
-            </a>
+          <div className="hidden lg:flex items-center shrink-0">
             <Link
               href="/contact"
-              className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-[0.85rem] font-semibold tracking-wide transition-all duration-300 ${
+              className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-[0.85rem] font-semibold tracking-wide transition-all duration-300 shrink-0 ${
                 isHome && !scrolled
                   ? "bg-brand-gold text-brand-charcoal hover:bg-white hover:text-brand-green"
                   : "bg-brand-green text-white hover:bg-brand-gold hover:text-brand-charcoal"
               }`}
             >
               <span>Get Consultation</span>
-              <ArrowRight size={14} />
+              <ArrowRight size={14} className="shrink-0" />
             </Link>
           </div>
 

@@ -253,7 +253,7 @@ export const projectsData: ProjectItem[] = [
     title: "Halal Court Layout",
     location: "Karewa, Jimeta-Yola, Adamawa State",
     startingPrice: "₦3.5 Million",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/leadership-visit-2.jpg",
     highlights: [
       "Residential community",
       "Northern investment hub",
@@ -270,14 +270,18 @@ export const projectsData: ProjectItem[] = [
     ],
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15758.106560416972!2d12.470008573133379!3d9.215509748956965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11029da9fdfd75cb%3A0x6b4bb5ffbde1a88b!2sJimeta%2C%20Yola!5e0!3m2!1sen!2sng!4v1689032688990!5m2!1sen!2sng",
     availability: "Available",
-    category: "Land Banking"
+    category: "Land Banking",
+    gallery: [
+      "/images/leadership-visit-2.jpg",
+      "/images/leadership-visit-4.jpg"
+    ]
   },
   {
     slug: "dougerie-hills",
     title: "Dougerie Hills",
     location: "Old GRA, Jimeta-Yola, Adamawa State",
     startingPrice: "₦5.5 Million",
-    image: "https://images.unsplash.com/photo-1524813686514-a57563d77965?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/leadership-visit-3.jpg",
     highlights: [
       "Premium terrain development",
       "Master planned estate",
@@ -294,7 +298,11 @@ export const projectsData: ProjectItem[] = [
     ],
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31516.21312083394!2d12.480000000000002!3d9.220000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMTMnMTIuMCJOIDEycKwMjgnNDguMCJF!5e0!3m2!1sen!2sng!4v1689032799990!5m2!1sen!2sng",
     availability: "Limited Slots Available",
-    category: "Infrastructure"
+    category: "Infrastructure",
+    gallery: [
+      "/images/leadership-visit-3.jpg",
+      "/images/leadership-visit-4.jpg"
+    ]
   },
   {
     slug: "midas-city-idu",
