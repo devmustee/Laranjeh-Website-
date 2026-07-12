@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #0A2A1B;
+  --color-brand-green-light: #15452F;
+  --color-brand-green-dark: #051A10;
+  --color-brand-gold: #C5A059;
+  --color-brand-gold-light: #DFBF81;
+  --color-brand-gold-dark: #A8823E;
+  --color-brand-charcoal: #111111;
+  --color-brand-charcoal-light: #1F1F1F;
+  --color-brand-gray: #F5F7F6;
+  --color-brand-gray-dark: #E2E5E4;
+  
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #1F2937; /* Neutral charcoal-ish text */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism effects */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 229, 224, 0.5);
+}
+
+.glass-nav-dark {
+  background: rgba(10, 42, 27, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 229, 224, 0.6);
+  border-radius: 1rem;
+}
+
+.glass-card-dark {
+  background: rgba(31, 31, 31, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  border-radius: 1rem;
+}
+
+/* Custom premium hover effect shadows */
+.premium-shadow-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(10, 42, 27, 0.15);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F7F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8823E;
+}
+
+/* Custom typography settings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Focus styles for keyboard navigation (WCAG compliance) */
+*:focus-visible {
+  outline: 2px solid #C5A059;
+  outline-offset: 2px;
+}
