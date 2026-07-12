@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { propertiesData, siteConfig } from "@/data/siteData";
 import { Search, MapPin, Ruler, Star, Phone, MessageSquare, Shield } from "lucide-react";
 
@@ -101,13 +102,20 @@ export default function PropertiesPage() {
                   <button
                     key={loc}
                     onClick={() => setLocationFilter(loc)}
-                    className={`flex-1 text-center py-2.5 rounded-lg text-[10px] font-extrabold uppercase tracking-wider transition-all duration-300 ${
+                    className={`relative flex-1 text-center py-2.5 rounded-lg text-[10px] font-extrabold uppercase tracking-wider transition-colors duration-300 focus:outline-none ${
                       locationFilter === loc
-                        ? "bg-brand-green text-white shadow-xs"
+                        ? "text-white"
                         : "text-gray-500 hover:text-brand-green"
                     }`}
                   >
-                    {loc === "All" ? "All" : loc}
+                    {locationFilter === loc && (
+                      <motion.span
+                        layoutId="activePropertyLocation"
+                        className="absolute inset-0 bg-brand-green rounded-lg z-0"
+                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                      />
+                    )}
+                    <span className="relative z-10">{loc === "All" ? "All" : loc}</span>
                   </button>
                 ))}
               </div>

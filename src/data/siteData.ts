@@ -325,6 +325,33 @@ export const projectsData: ProjectItem[] = [
       "/images/site-visit-2.jpg",
       "/images/site-visit-3.jpg"
     ]
+  },
+  {
+    slug: "doha-layout",
+    title: "Döha Layout",
+    location: "Ring Road, Jankasa, Jimeta-Yola, Adamawa State",
+    startingPrice: "₦2.5 Million",
+    image: "/images/doha-billboard.png",
+    highlights: [
+      "Secure plots in Jankasa corridor",
+      "Strategic NYSC Camp proximity",
+      "Access Roads & Greenery",
+      "100% Secure Smart Investment"
+    ],
+    description: "Döha Layout is a premier smart investment development situated in Jankasa, Jimeta-Yola, directly adjacent to the new NYSC Camp. Boasting planned access roads, perimeter security, and deliberate ecological greenery, this layout is perfect for forward-thinking investors seeking rapid capital appreciation.",
+    features: [
+      "450 SQM (₦2.5M) & 900 SQM (₦5M) Plot allocations",
+      "Planned Access Road Network",
+      "Secured Gated Perimeter & Security Checks",
+      "Dedicated Ecological Greenery & Green Zones",
+      "Proximity to the new NYSC Camp layout"
+    ],
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15760.0!2d12.48!3d9.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMTMnMTIuMCJOIDEycKwMjgnNDguMCJF!5e0!3m2!1sen!2sng!4v1689032799990!5m2!1sen!2sng",
+    availability: "Selling Fast - Limited Plots Remaining",
+    category: "Land Banking",
+    gallery: [
+      "/images/doha-billboard.png"
+    ]
   }
 ];
 
@@ -412,6 +439,30 @@ export const propertiesData: PropertyItem[] = [
     investmentPotential: "Exceptional Rental Yield",
     availability: "Selling Fast",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: "prop-8",
+    title: "Döha Layout Smart Plot (450 SQM)",
+    price: "₦2,500,000",
+    rawPrice: 2500000,
+    location: "Jankasa, Jimeta-Yola",
+    landSize: "450 sqm",
+    features: ["Access Road Network", "Gated Security Layout", "Eco-friendly Green Zones", "NYSC Camp layout proximity"],
+    investmentPotential: "Very High (~25% projected annual appreciation)",
+    availability: "Available",
+    image: "/images/doha-billboard.png"
+  },
+  {
+    id: "prop-9",
+    title: "Döha Layout Smart Plot (900 SQM)",
+    price: "₦5,000,000",
+    rawPrice: 5000000,
+    location: "Jankasa, Jimeta-Yola",
+    landSize: "900 sqm",
+    features: ["Access Road Network", "Gated Security Layout", "Double lot capacity", "Eco-friendly Green Zones"],
+    investmentPotential: "Exceptional appreciation potential",
+    availability: "Selling Fast",
+    image: "/images/doha-billboard.png"
   }
 ];
 

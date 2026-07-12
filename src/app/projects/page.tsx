@@ -62,13 +62,20 @@ export default function ProjectsPage() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 ${
+              className={`relative px-5 py-2.5 rounded-full text-xs font-bold transition-colors duration-300 focus:outline-none ${
                 filter === cat
-                  ? "bg-brand-green text-white shadow-md border-transparent"
+                  ? "text-white"
                   : "bg-brand-gray/60 text-gray-600 border border-brand-gray-dark hover:bg-brand-gray hover:text-brand-green"
               }`}
             >
-              {cat}
+              {filter === cat && (
+                <motion.span
+                  layoutId="activeProjectCategory"
+                  className="absolute inset-0 bg-brand-green rounded-full z-0"
+                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">{cat}</span>
             </button>
           ))}
         </div>

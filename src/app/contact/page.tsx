@@ -29,6 +29,7 @@ type ContactFormInput = z.infer<typeof contactSchema>;
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [apiError, setApiError] = useState<string | null>(null);
 
   const {
     register,
@@ -47,11 +48,23 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (data: ContactFormInput) => {
-    console.log("Contact form submitted:", data);
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setSubmitted(true);
-    reset();
+    setApiError(null);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Failed to submit message");
+      }
+      setSubmitted(true);
+      reset();
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "An unexpected error occurred.";
+      setApiError(msg);
+    }
   };
 
   // WhatsApp prefilled message
@@ -204,6 +217,11 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                {apiError && (
+                  <div className="bg-red-50 text-red-600 border border-red-200 p-4 rounded-xl text-xs text-left leading-relaxed">
+                    {apiError}
+                  </div>
+                )}
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name Input */}

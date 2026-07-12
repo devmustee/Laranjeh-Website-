@@ -20,6 +20,7 @@ type CareerFormInput = z.infer<typeof careerSchema>;
 
 export default function CareersPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [apiError, setApiError] = useState<string | null>(null);
 
   const {
     register,
@@ -38,11 +39,23 @@ export default function CareersPage() {
   });
 
   const onSubmit = async (data: CareerFormInput) => {
-    console.log("Career application submitted:", data);
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setSubmitted(true);
-    reset();
+    setApiError(null);
+    try {
+      const response = await fetch("/api/careers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Failed to submit application");
+      }
+      setSubmitted(true);
+      reset();
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "An unexpected error occurred.";
+      setApiError(msg);
+    }
   };
 
   const openPositions = [
@@ -166,6 +179,11 @@ export default function CareersPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                {apiError && (
+                  <div className="bg-red-50 text-red-600 border border-red-200 p-4 rounded-xl text-xs text-left leading-relaxed">
+                    {apiError}
+                  </div>
+                )}
                 
                 {/* Full name input */}
                 <div>

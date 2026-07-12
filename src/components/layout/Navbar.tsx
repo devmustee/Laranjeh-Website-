@@ -63,14 +63,14 @@ export const Navbar: React.FC = () => {
           <Logo light={isHome && !scrolled} />
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-7">
             {navLinks.map((link) => {
               const isActive = pathname === link.path;
               return (
                 <Link
                   key={link.path}
                   href={link.path}
-                  className={`font-sans text-[0.9rem] font-medium transition-colors duration-300 relative py-1 group ${
+                  className={`font-sans text-xs xl:text-[0.9rem] font-medium transition-colors duration-300 relative py-1 group shrink-0 ${
                     isActive
                       ? isHome && !scrolled
                         ? "text-brand-gold-light"

@@ -42,7 +42,7 @@ export default function HomePage() {
   return (
     <div className="w-full">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[92vh] flex items-center bg-brand-green-dark text-white overflow-hidden pt-12">
+      <section className="relative min-h-[92vh] flex items-center bg-brand-green-dark text-white overflow-hidden -mt-[70px] lg:-mt-[80px] pt-[118px] lg:pt-[128px]">
         {/* Dynamic Dark Backdrop with cinematic overlay */}
         <div className="absolute inset-0 z-0">
           <Image

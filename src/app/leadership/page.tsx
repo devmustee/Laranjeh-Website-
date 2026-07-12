@@ -346,10 +346,10 @@ export default function LeadershipPage() {
                 {[
                   {
                     id: "net-1",
-                    imgSrc: "/images/network-1.jpg",
+                    imgSrc: "/images/network-1.png",
                     fallbackSrc: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
-                    title: "Visionary Business Leader Alignments",
-                    desc: "Collaborating with local and regional developers to unlock large land tracts."
+                    title: "Strategic Visit to Barka Umshelia",
+                    desc: "Collaborating with visionary business leaders like B. Arka Umshelia, founder of Msell/Umshelia, to build shared value, trust, and collective progress."
                   },
                   {
                     id: "net-2",
