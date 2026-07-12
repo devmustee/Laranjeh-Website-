@@ -23,6 +23,7 @@ export interface ProjectItem {
   availability: string;
   category: "Residential" | "Commercial" | "Land Banking" | "Infrastructure";
   gallery?: string[];
+  imagePosition?: string;
 }
 
 export interface PropertyItem {
@@ -56,6 +57,7 @@ export interface BlogItem {
   image: string;
   category: string;
   readTime: string;
+  bodyHTML?: string;
 }
 
 export const servicesData: ServiceItem[] = [
@@ -359,7 +361,8 @@ export const projectsData: ProjectItem[] = [
     category: "Land Banking",
     gallery: [
       "/images/doha-billboard.png"
-    ]
+    ],
+    imagePosition: "object-bottom"
   }
 ];
 
@@ -518,7 +521,34 @@ export const blogData: BlogItem[] = [
     date: "July 10, 2026",
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop",
     category: "Real Estate Investment",
-    readTime: "5 min read"
+    readTime: "5 min read",
+    bodyHTML: `
+      <p class="lead text-lg font-medium text-gray-800">
+        In an economy characterized by currency depreciation and shifting monetary policies, physical assets are no longer just an investment option—they are a critical mechanism for wealth preservation. For Nigerian investors, land banking has emerged as the most resilient hedge against inflation.
+      </p>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">The Wealth Erosion Dilemma</h3>
+      <p>
+        Leaving capital in traditional bank savings accounts or short-term treasury bills guarantees a negative real rate of return. With inflation rates hovering at double digits, paper currency yields less purchasing power each passing month. Land, however, possesses inherent scarcity. As urban boundaries expand and populations swell, the intrinsic value of well-located plots naturally adjusts upward, outpacing currency devaluation.
+      </p>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">High-Growth Corridors: Abuja and Jimeta-Yola</h3>
+      <p>
+        The success of land banking depends entirely on location and accessibility. At Leranjeh Nigeria Limited, our strategic layouts are carefully located in high-growth corridors where development is guaranteed:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Abuja (Idu and Jabi Expansion):</strong> Districts positioned near administrative boundaries and industrial hubs experience rapid appreciation due to continuous infrastructure mapping.</li>
+        <li><strong>Jimeta-Yola (Karewa, Old GRA, and Jankasa):</strong> The Jankasa corridor (adjacent to the new NYSC Camp) represents a premier smart investment destination where plot demands are peaking due to new road accesses and institutional developments.</li>
+      </ul>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">The Integrity Safeguard: Verification and Boundaries</h3>
+      <p>
+        Land banking only hedges inflation if your title is legally secure. Buying land without a verified Certificate of Occupancy (C of O), government survey coordinates, or permanent fencing exposes investors to boundary disputes and title overlaps. 
+      </p>
+      <p>
+        Leranjeh eliminates these risks by conducting rigorous preliminary audits, registering verified titles, and securing all properties with physical layouts. When you bank land with Leranjeh, your wealth is secured by permanent masonry structures and government-verified coordinates.
+      </p>
+    `
   },
   {
     slug: "contemporary-african-architecture-trends",
@@ -528,7 +558,29 @@ export const blogData: BlogItem[] = [
     date: "June 25, 2026",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
     category: "Architecture & Design",
-    readTime: "7 min read"
+    readTime: "7 min read",
+    bodyHTML: `
+      <p class="lead text-lg font-medium text-gray-800">
+        For decades, African urban skylines imported glass-heavy European blueprints that ignored the realities of the tropical climate. This resulted in "greenhouse" structures dependent on massive HVAC systems. Today, a new wave of contemporary African architecture is redefining luxury by integrating ecological integrity with functional aesthetics.
+      </p>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">Designing for the Climate</h3>
+      <p>
+        Architectural design must respond to its local climate. Passive design strategies focus on how a building is positioned relative to the sun and local wind currents. By orienting structures along the east-west axis, architects minimize direct solar heat gain on large walls, keeping indoor temperatures significantly lower.
+      </p>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">Key Principles of Passive Cooling</h3>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Natural Cross-Ventilation:</strong> Aligning windows and courtyards to leverage prevailing evening breezes, flushing out hot indoor air.</li>
+        <li><strong>Biophilic Elements:</strong> Integrating vertical gardens, interior water features, and deliberate tree lines that cool air before it enters the building.</li>
+        <li><strong>High Thermal Mass Materials:</strong> Using masonry and concrete composites that absorb daytime heat and release it slowly at night, stabilizing indoor temperatures.</li>
+      </ul>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">Arch. Kashawa Daniel Mbororo's Vision</h3>
+      <p>
+        At Leranjeh Nigeria Limited, our GMD, Arch. Daniel Mbororo, champions designs that blend minimalist luxury with local materials. By incorporating extended roof overhangs, custom screens (Mashrabiya-style vents), and ecological courtyards, our residential layouts stay cool and comfortable while reducing air conditioning utility bills by up to 35%. This is the standard of sustainable luxury.
+      </p>
+    `
   },
   {
     slug: "importance-of-soil-testing-in-high-rise-construction",
@@ -536,9 +588,41 @@ export const blogData: BlogItem[] = [
     excerpt: "Skipping soil tests is the single largest cause of structural structural failure in Nigeria. Learn about the geotechnical processes Leranjeh employs for every project.",
     content: "Before a single concrete column is poured, understanding the load-bearing capacity of the underlying soil strata is crucial. Clay soil, swampy ground, or sloping terrains require distinct foundation engineering approaches (strip, raft, or piling). We explain the soil test procedures, how SPT (Standard Penetration Test) reports are compiled, and why solid foundations protect your real estate investments for generations.",
     date: "May 18, 2026",
-    image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?q=80&w=800&auto=format&fit=crop",
+    image: "/images/leadership-visit-2.jpg",
     category: "Civil Engineering",
-    readTime: "4 min read"
+    readTime: "4 min read",
+    bodyHTML: `
+      <p class="lead text-lg font-medium text-gray-800">
+        In structural engineering, the most critical element of a building is the one you never see: the foundation. Skipping geotechnical soil testing is the single largest cause of structural failures, cracked walls, and building collapses in Nigeria.
+      </p>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">Why Soil Testing is Mandatory</h3>
+      <p>
+        The earth is not uniform. Soil strata can vary dramatically, even across a single plot. Clay soils swell when wet and shrink when dry, placing immense structural stress on concrete structures. Sandy soils can shift, while organic soils lack the load-bearing capacity to support multi-storey buildings.
+      </p>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">Geotechnical Methods</h3>
+      <p>
+        Before design calculations begin, Leranjeh's engineering teams conduct two primary diagnostic field tests:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Cone Penetrometer Testing (CPT):</strong> Pushing a instrumented steel cone into the ground to measure soil resistance at varying depths.</li>
+        <li><strong>Standard Penetration Testing (SPT):</strong> Boring deep holes to extract physical soil samples, determining the moisture levels, density, and bearing capacity of the soil strata.</li>
+      </ul>
+      
+      <h3 class="text-xl font-bold font-heading text-brand-green mt-8 mb-4">Tailoring the Foundation</h3>
+      <p>
+        The data from these tests dictates the foundation design:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 my-4">
+        <li><strong>Strip Foundations:</strong> Suitable for shallow, load-bearing soils in dry, stable locations.</li>
+        <li><strong>Raft Foundations:</strong> Used for clay or unstable soil structures to distribute the building's weight evenly across the entire surface.</li>
+        <li><strong>Pile Foundations:</strong> Essential for swampy, deltaic, or waterlogged terrains, driving heavy concrete shafts deep into the earth to rest on solid bedrock.</li>
+      </ul>
+      <p>
+        By insisting on comprehensive soil testing for all Leranjeh developments, we ensure your building remains structurally sound for generations.
+      </p>
+    `
   }
 ];
 

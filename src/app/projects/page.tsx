@@ -103,7 +103,7 @@ export default function ProjectsPage() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`object-cover ${project.imagePosition || "object-center"} transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute top-4 left-4 bg-brand-green text-white text-3xs font-extrabold uppercase px-3 py-1 rounded-full shadow-sm tracking-wider">
                     {project.category}

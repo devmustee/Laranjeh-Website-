@@ -347,7 +347,7 @@ export default function HomePage() {
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div className="relative h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                  src="/images/uncle-pikin.png"
                   alt="Uncle Pikin, Leranjeh Brand Ambassador Portrait"
                   fill
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-103"
@@ -408,7 +408,7 @@ export default function HomePage() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`object-cover ${project.imagePosition || "object-center"} transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute top-4 left-4 bg-brand-green text-white text-3xs font-extrabold uppercase px-3 py-1 rounded-full shadow-sm tracking-wider">
                     {project.category}

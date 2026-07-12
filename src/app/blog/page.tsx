@@ -81,7 +81,7 @@ export default function BlogPage() {
                   
                   {/* Since this is a CMS demo, we redirect to contact for inquiries on blogs */}
                   <Link
-                    href="/contact"
+                    href={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-1 text-xs font-bold text-brand-gold-dark hover:text-brand-green transition-colors"
                   >
                     <span>Read Article</span>
