@@ -312,6 +312,97 @@ export default function LeadershipPage() {
         </div>
       </section>
 
+      {/* Executive Directors Section */}
+      <section className="py-20 bg-white border-t border-brand-gray-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs uppercase font-extrabold tracking-widest text-brand-gold-dark block">
+              Corporate Governance
+            </span>
+            <h2 className="text-3xl font-extrabold font-heading text-brand-green">
+              Executive Board of Directors
+            </h2>
+            <p className="text-gray-650 text-sm leading-relaxed">
+              Leranjeh Nigeria Limited is guided by an international board of distinguished real estate, 
+              construction, and finance professionals who ensure corporate governance, compliance, 
+              and strategic global partnerships.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* John KF Lam */}
+            <div className="bg-brand-gray/25 border border-brand-gray-dark rounded-2xl overflow-hidden flex flex-col sm:flex-row premium-shadow-hover transition-all duration-300">
+              <div className="relative h-64 sm:h-auto sm:w-48 shrink-0 bg-white">
+                <SafeImage
+                  src="https://leranjeh.com/images/leranjeh.com/users/picture/d215e5cd7d441d799f0ef8c701094bcd.jpg"
+                  fallbackSrc="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+                  alt="Mr. John KF Lam, Executive Director"
+                  fill
+                  unoptimized={true}
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between text-left space-y-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] uppercase font-bold text-brand-gold-dark tracking-wider block">
+                    Hong Kong Operations
+                  </span>
+                  <h4 className="font-heading font-extrabold text-base text-brand-green">
+                    Mr. John KF Lam
+                  </h4>
+                  <p className="text-brand-charcoal text-xs font-semibold">
+                    Executive Director
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <h5 className="text-[10px] font-extrabold uppercase text-gray-500 tracking-wider">
+                    Office Coordinates:
+                  </h5>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Unit 10, 9th Floor, Tower A, New Mandarin Plaza, No. 14 Science Museum Road, Tsim Sha Tsui East, Kowloon, Hong Kong.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Terry Richard Udomiaye */}
+            <div className="bg-brand-gray/25 border border-brand-gray-dark rounded-2xl overflow-hidden flex flex-col sm:flex-row premium-shadow-hover transition-all duration-300">
+              <div className="relative h-64 sm:h-auto sm:w-48 shrink-0 bg-white">
+                <SafeImage
+                  src="https://leranjeh.com/images/leranjeh.com/users/picture/511ae7e8a445e477e355695adc42ffb6.jpg"
+                  fallbackSrc="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                  alt="Terry Richard Udomiaye, Executive Director"
+                  fill
+                  unoptimized={true}
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between text-left space-y-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] uppercase font-bold text-brand-gold-dark tracking-wider block">
+                    United States Operations
+                  </span>
+                  <h4 className="font-heading font-extrabold text-base text-brand-green">
+                    Terry Richard Udomiaye
+                  </h4>
+                  <p className="text-brand-charcoal text-xs font-semibold">
+                    Executive Director
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <h5 className="text-[10px] font-extrabold uppercase text-gray-500 tracking-wider">
+                    Office Coordinates:
+                  </h5>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    100 Powell Place, Suite 1781, Nashville, TN 37204, USA.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 4. CEO Site Inspections & Field Gallery */}
       <section className="py-24 bg-brand-gray/30 border-t border-b border-brand-gray-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">

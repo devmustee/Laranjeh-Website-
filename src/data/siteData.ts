@@ -501,6 +501,18 @@ export const propertiesData: PropertyItem[] = [
     investmentPotential: "Exceptional appreciation potential",
     availability: "Selling Fast",
     image: "/images/doha-billboard.png"
+  },
+  {
+    id: "prop-10",
+    title: "Aso Royale 4 Bedroom Terrace Duplex",
+    price: "₦11,250,000",
+    rawPrice: 11250000,
+    location: "Asokoro II, Abuja",
+    landSize: "200 - 300 sqm",
+    features: ["4 Bedrooms", "5 Baths", "Spacious living room", "Central gas line", "Adequate parking space"],
+    investmentPotential: "High rental income potential and capital appreciation",
+    availability: "Available",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -667,20 +679,34 @@ export const siteConfig = {
     admin1: "+2349114417341",
     admin1Formatted: "+234 911 441 7341",
     admin2: "+2347048003113",
-    admin2Formatted: "+234 704 800 3113"
+    admin2Formatted: "+234 704 800 3113",
+    hotline: "+2348036237665",
+    hotlineFormatted: "+234 803 623 7665"
   },
   offices: {
     abuja: {
-      title: "Abuja Headquarters",
+      title: "Abuja Headquarters (Jabi)",
       address: "No. 11 Emmanuel Adiele Street, Jabi (Opposite Police Resource Centre / Off Mike Akhigbe Way), FCT, Abuja, Nigeria.",
       hours: "Mon - Fri: 8:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.0631627632613!2d7.420803475908298!3d9.067160788339893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e7561f748db87%3A0xc48c0b24032d9cbf!2sEmmanuel%20Adiele%20St%2C%20Jabi%2C%20Abuja!5e0!3m2!1sen!2sng!4v1689033000000!5m2!1sen!2sng"
     },
+    abujaOld: {
+      title: "Abuja Office (Wuye)",
+      address: "Acacia Grove Estate, Idris Gidado Street Wuye, Abuja, Nigeria.",
+      hours: "Mon - Sat: 8:00 AM - 5:00 PM",
+      mapEmbedUrl: ""
+    },
     yola: {
-      title: "Yola Branch Office",
+      title: "Yola Branch Office (Old GRA)",
       address: "Adjacent Children's Home, Old GRA, Karewa, Jimeta-Yola, Adamawa State, Nigeria.",
       hours: "Mon - Fri: 8:30 AM - 5:00 PM, Sat: By Appointment Only",
       mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.525547631317!2d12.477027175908688!3d9.215509788339328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11029db50a789a29%3A0xd68b209bd3de8ab3!2sGRA%20Yola!5e0!3m2!1sen!2sng!4v1689033100000!5m2!1sen!2sng"
+    },
+    yolaOld: {
+      title: "Yola Branch Office (Jabama Plaza)",
+      address: "#6 First Floor Jabama Plaza Jimeta Yola, Adamawa State, Nigeria.",
+      hours: "Mon - Fri: 8:30 AM - 5:00 PM",
+      mapEmbedUrl: ""
     }
   },
   social: {

@@ -118,35 +118,23 @@ export default function ContactPage() {
 
             {/* Offices Details Cards */}
             <div className="space-y-8">
-              {/* Abuja Headquarters */}
-              <div className="bg-brand-gray/30 border border-brand-gray-dark p-6 rounded-2xl space-y-3">
-                <div className="flex items-center gap-2 text-brand-green">
-                  <MapPin size={18} className="text-brand-gold shrink-0" />
-                  <h3 className="font-heading font-extrabold text-base">{siteConfig.offices.abuja.title}</h3>
+              {Object.values(siteConfig.offices).map((office) => (
+                <div key={office.title} className="bg-brand-gray/30 border border-brand-gray-dark p-6 rounded-2xl space-y-3">
+                  <div className="flex items-center gap-2 text-brand-green">
+                    <MapPin size={18} className="text-brand-gold shrink-0" />
+                    <h3 className="font-heading font-extrabold text-base">{office.title}</h3>
+                  </div>
+                  <p className="text-gray-700 text-xs pl-6 leading-relaxed">
+                    {office.address}
+                  </p>
+                  {office.hours && (
+                    <div className="flex items-center gap-2 pl-6 text-xs text-gray-500 font-semibold">
+                      <Clock size={14} className="text-brand-gold" />
+                      <span>{office.hours}</span>
+                    </div>
+                  )}
                 </div>
-                <p className="text-gray-700 text-xs pl-6 leading-relaxed">
-                  {siteConfig.offices.abuja.address}
-                </p>
-                <div className="flex items-center gap-2 pl-6 text-xs text-gray-500 font-semibold">
-                  <Clock size={14} className="text-brand-gold" />
-                  <span>{siteConfig.offices.abuja.hours}</span>
-                </div>
-              </div>
-
-              {/* Yola Office */}
-              <div className="bg-brand-gray/30 border border-brand-gray-dark p-6 rounded-2xl space-y-3">
-                <div className="flex items-center gap-2 text-brand-green">
-                  <MapPin size={18} className="text-brand-gold shrink-0" />
-                  <h3 className="font-heading font-extrabold text-base">{siteConfig.offices.yola.title}</h3>
-                </div>
-                <p className="text-gray-700 text-xs pl-6 leading-relaxed">
-                  {siteConfig.offices.yola.address}
-                </p>
-                <div className="flex items-center gap-2 pl-6 text-xs text-gray-500 font-semibold">
-                  <Clock size={14} className="text-brand-gold" />
-                  <span>{siteConfig.offices.yola.hours}</span>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* General Corporate Support Points */}
@@ -178,6 +166,12 @@ export default function ContactPage() {
                   className="text-brand-green hover:text-brand-gold font-bold text-xs block"
                 >
                   {siteConfig.phones.supportFormatted} (Support & WA)
+                </a>
+                <a
+                  href={`tel:${siteConfig.phones.hotline}`}
+                  className="text-brand-green hover:text-brand-gold font-bold text-xs block"
+                >
+                  {siteConfig.phones.hotlineFormatted} (Primary Hotline)
                 </a>
                 <span className="text-gray-500 font-semibold text-2xs block">
                   Ops: {siteConfig.phones.admin1Formatted} | {siteConfig.phones.admin2Formatted}

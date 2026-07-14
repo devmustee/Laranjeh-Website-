@@ -88,26 +88,18 @@ export const Footer: React.FC = () => {
               Our Offices
             </h3>
             
-            {/* Abuja HQ */}
-            <div className="space-y-2">
-              <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                <MapPin size={14} className="text-brand-gold" />
-                <span>{siteConfig.offices.abuja.title}</span>
-              </h4>
-              <p className="text-gray-400 text-xs leading-relaxed pl-6">
-                {siteConfig.offices.abuja.address}
-              </p>
-            </div>
-
-            {/* Yola Office */}
-            <div className="space-y-2 pt-2">
-              <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                <MapPin size={14} className="text-brand-gold" />
-                <span>{siteConfig.offices.yola.title}</span>
-              </h4>
-              <p className="text-gray-400 text-xs leading-relaxed pl-6">
-                {siteConfig.offices.yola.address}
-              </p>
+            <div className="space-y-4 max-h-[250px] overflow-y-auto pr-2 custom-scrollbar">
+              {Object.values(siteConfig.offices).map((office) => (
+                <div key={office.title} className="space-y-1">
+                  <h4 className="text-xs font-bold text-white flex items-center gap-2">
+                    <MapPin size={12} className="text-brand-gold shrink-0" />
+                    <span>{office.title}</span>
+                  </h4>
+                  <p className="text-gray-400 text-[0.7rem] leading-relaxed pl-5">
+                    {office.address}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -161,6 +153,13 @@ export const Footer: React.FC = () => {
               >
                 <Phone size={14} className="text-brand-gold" />
                 <span>{siteConfig.phones.supportFormatted} (Support)</span>
+              </a>
+              <a
+                href={`tel:${siteConfig.phones.hotline}`}
+                className="flex items-center gap-2 hover:text-brand-gold transition-colors text-xs"
+              >
+                <Phone size={14} className="text-brand-gold" />
+                <span>{siteConfig.phones.hotlineFormatted} (Hotline)</span>
               </a>
               <div className="flex items-start gap-2 text-xs">
                 <Clock size={14} className="text-brand-gold mt-0.5" />

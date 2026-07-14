@@ -157,6 +157,53 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      {/* Completed Projects Gallery Section */}
+      <section className="py-20 bg-brand-gray/10 border-t border-brand-gray-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center space-y-4 max-w-3xl mx-auto">
+            <span className="text-xs uppercase font-extrabold tracking-widest text-brand-gold-dark block">
+              Execution & History
+            </span>
+            <h2 className="text-3xl font-extrabold font-heading text-brand-green">
+              Completed Projects & Field Gallery
+            </h2>
+            <p className="text-gray-650 text-sm leading-relaxed">
+              A visual record of our building footprints. From foundation deck casting to structural detailing, 
+              we build residential duplexes, administrative layouts, and road network expansions across Nigeria.
+            </p>
+          </div>
+
+          {/* Masonry or Grid Gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: "https://leranjeh.com/images/leranjeh.com/1.jpg", span: "md:col-span-2 md:row-span-2", alt: "Completed Luxury Bungalow Gated Entry" },
+              { src: "https://leranjeh.com/images/leranjeh.com/2.jpg", span: "col-span-1", alt: "Modern Estate Perimeter Boundary Walls" },
+              { src: "https://leranjeh.com/images/leranjeh.com/3.jpg", span: "col-span-1", alt: "Standard Bricklaying & Wall Framing" },
+              { src: "https://leranjeh.com/images/leranjeh.com/4.jpg", span: "col-span-1", alt: "Upper Deck Slab Reinforcement Casting" },
+              { src: "https://leranjeh.com/images/leranjeh.com/5.jpg", span: "col-span-1", alt: "Completed Multi-Family Terrace Structure" },
+              { src: "https://leranjeh.com/images/leranjeh.com/6.jpg", span: "col-span-1", alt: "Site Operations Supervision Truck" },
+              { src: "https://leranjeh.com/images/leranjeh.com/7.jpg", span: "col-span-1", alt: "Finished External Painting and Plastering" },
+            ].map((img, index) => (
+              <div
+                key={index}
+                className={`relative rounded-2xl overflow-hidden border border-brand-gray-dark shadow-sm group bg-brand-gray/50 ${img.span || ""} h-64 md:h-auto min-h-[16rem]`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  unoptimized={true}
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 text-left">
+                  <span className="text-white text-xs font-semibold">{img.alt}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Trust factors callout */}
       <section className="bg-brand-gray/30 border-t py-16 text-center">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
