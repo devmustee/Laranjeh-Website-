@@ -98,3 +98,12 @@ h1, h2, h3, h4, h5, h6 {
   outline: 2px solid #C5A059;
   outline-offset: 2px;
 }
+
+/* Hide scrollbar utility for horizontal scroll boxes */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

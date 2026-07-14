@@ -57,13 +57,13 @@ export default function ProjectsPage() {
         </div>
 
         {/* Filter buttons */}
-        <div className="flex justify-center items-center">
-          <div className="inline-flex flex-wrap items-center gap-1.5 bg-brand-gray/40 border border-brand-gray-dark p-1 rounded-full shadow-2xs">
+        <div className="flex justify-center items-center w-full">
+          <div className="flex items-center gap-1.5 bg-brand-gray/40 border border-brand-gray-dark p-1 rounded-2xl md:rounded-full shadow-2xs max-w-full overflow-x-auto scrollbar-none whitespace-nowrap">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`relative px-5 xl:px-6 py-2 rounded-full text-2xs font-extrabold uppercase tracking-wider transition-colors duration-350 focus:outline-none ${
+                className={`relative px-4 sm:px-5 md:px-6 py-2.5 rounded-xl md:rounded-full text-[10px] sm:text-2xs font-extrabold uppercase tracking-wider transition-colors duration-350 focus:outline-none shrink-0 ${
                   filter === cat
                     ? "text-white"
                     : "text-gray-500 hover:text-brand-green"
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
                 {filter === cat && (
                   <motion.span
                     layoutId="activeProjectCategory"
-                    className="absolute inset-0 bg-brand-green rounded-full z-0 shadow-xs"
+                    className="absolute inset-0 bg-brand-green rounded-xl md:rounded-full z-0 shadow-xs"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
